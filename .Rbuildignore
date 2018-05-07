@@ -1,0 +1,8 @@
+^README\.Rmd$
+^README-.*\.png$
+^packrat/
+^\.Rprofile$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.travis\.yml$
+^codecov\.yml$

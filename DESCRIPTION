@@ -1,0 +1,16 @@
+Package: RepoGenerator
+Title: Generates a project and repo for easy initialization of a workshop
+Version: 0.0.1
+Authors@R: person("Jared", "Lander", email = "packages@jaredlander.com", role = c("aut", "cre"))
+Description: Generates a project and repo for easy initialization of a workshop.
+Depends: R (>= 3.4.3)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: rstudioapi,
+    git2r,
+    gh,
+    rmarkdown
+RoxygenNote: 6.0.1
+Suggests: testthat,
+    covr

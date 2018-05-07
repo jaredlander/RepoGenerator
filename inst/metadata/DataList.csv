@@ -1,0 +1,15 @@
+Data,Remote,Local,Type,Mode,Tag,Purpose
+Diamond Colors,https://query.data.world/s/uVlTdijkCbfac49-3k12tawsmviArp,DiamondColors.csv,CSV,w,Diamonds,Data Manipulation
+Diamonds Database,https://query.data.world/s/Z5k9W39e1kD5hzcJIcRlFClhIHnw5v,diamonds.db,SQLite,wb,Diamonds,Data Manipulation
+Excel Example,https://query.data.world/s/5wa6K_X91yfkf-BVpRe2UIabO5A-QB,ExcelExample.xlsx,Excel,wb,Excel,Reading Data
+Favorite Pizza,https://query.data.world/s/033kPeDH9pMdcnhPRIOwhjrw3lpA10,FavoriteSpots.json,JSON,w,Pizza,Mapping
+Flight Paths,https://query.data.world/s/IIwWxfh9cTydB8h_OueRyA7yxvZ6bf,flightPaths.csv,CSV,Flights,w,Mapping
+Reaction,https://query.data.world/s/uDfiLMRxSiB_kQQhEt_LbDGVOcStBR,reaction.txt,TSV,w,Psychology,Data Manipulation
+Ribalta,https://query.data.world/s/kK6-MCw-EbRmnwP-e2MmhEL82lLU4N,ribalta.html,HTML,w,Menu,Web Scraping
+Reviews,https://query.data.world/s/vzZ_zJzCqXY_yExaJIt79XkJAqUbe-,SocialComments.xml,w,XML,Review,Reading Data
+Tomatos,https://query.data.world/s/o_LrhM_oY5dexXVDbsMNxF2JyyIMrg,TomatoFirst.csv,CSV,w,Pizza,Reading Data
+Airports,https://query.data.world/s/GCIO0yVrO50N130s_CZNK50ujmqrE3,visited.csv,CSV,w,Flights,Mapping
+Manhattan Lots Test,https://query.data.world/s/tkfdrcapfsw7ihodbjzsdywz7povce,manhattan_Test.rds,RDS,wb,Lots,Modeling
+Manhattan Lots Train,https://query.data.world/s/t6nblljn7a5ei6ghdqzkhfynn7iu5b,manhattan_Train.rds,RDS,wb,Lots,Modeling
+Manhattan Lots Validate,https://query.data.world/s/4tfwbez3ul5ap7apg2ffgltfpzmifm,manhattan_Validate.rds,RDS,wb,Lots,Modeling
+Manhattan Lots Train CSV,https://query.data.world/s/zGvNwNJbY2470sjsVxYFstm426SEf1,manhattan_Train.csv,CSV,w,Lots,Modeling
