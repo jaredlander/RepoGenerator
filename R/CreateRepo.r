@@ -7,6 +7,7 @@
 #' @param name Name to use for project and repo
 #' @param path Location for the new project
 #' @param data [data.frame] listing data sources. Must have at least the following columns: Local (the name the file should be on disk after downloaded), Remote (the URL of the file), Mode (the way to write to disk, either 'w' or 'wb').
+#' @param packages Vector of packages that the user will be instructed to install.
 #' @param user GitHub username
 #' @param organizer Name of organizer of class. This can be in the form a a Markdown-style link.
 #' @param token The name of the environment variable holding the GitHub access token. This can be set with [base::Sys.setenv()].
@@ -14,6 +15,7 @@
 #' 
 createRepo <- function(name, path=file.path('~', name), 
                        data, 
+                       packages=c('tidyverse'),
                        user='jaredlander',
                        organizer="[Lander Analytics](www.landeranalytics.com)",
                        token='GITHUB_PAT')
@@ -30,7 +32,8 @@ createRepo <- function(name, path=file.path('~', name),
     rmarkdown::render(file.path(path, 'README.Rmd'), 
                       params=list(
                           className=name,
-                          organizer=organizer
+                          organizer=organizer,
+                          packages=packages
                       ), 
                       output_format=rmarkdown::github_document())
     # remove the HTML version of README which was created for some reason I don't know

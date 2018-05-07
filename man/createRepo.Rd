@@ -4,7 +4,8 @@
 \alias{createRepo}
 \title{createRepo}
 \usage{
-createRepo(name, path = file.path("~", name), data, user = "jaredlander",
+createRepo(name, path = file.path("~", name), data,
+  packages = c("tidyverse"), user = "jaredlander",
   organizer = "[Lander Analytics](www.landeranalytics.com)",
   token = "GITHUB_PAT")
 }
@@ -14,6 +15,8 @@ createRepo(name, path = file.path("~", name), data, user = "jaredlander",
 \item{path}{Location for the new project}
 
 \item{data}{\link{data.frame} listing data sources. Must have at least the following columns: Local (the name the file should be on disk after downloaded), Remote (the URL of the file), Mode (the way to write to disk, either 'w' or 'wb').}
+
+\item{packages}{Vector of packages that the user will be instructed to install.}
 
 \item{user}{GitHub username}
 
