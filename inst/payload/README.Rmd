@@ -3,6 +3,7 @@ output: github_document
 params:
     className: LearningR
     organizer: "[Lander Analytics](www.landeranalytics.com)"
+    packages: !r c('caret', 'tidyverse')
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -15,9 +16,22 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{js,echo=FALSE}
+code .sourceCode {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    overflow-wrap: break-word;
+}
+```
+
+
 ```{r settings,echo=FALSE, include=FALSE}
 className <- params$className
 organizer <- params$organizer
+packages <- params$packages
 ```
 
 # Live Training
@@ -28,7 +42,7 @@ This is an empty repo to initialize an R project for training courses organized 
 
 To get started run the following code to install the latest version of the necessary packages.
 
-```{r install.packages,eval=FALSE}
+```{r install.packages,eval=FALSE,echo=FALSE}
 packages <- c('caret', 'coefplot','DBI', 'dbplyr', 'doParallel', 'dygraphs', 
               'foreach', 'ggthemes', 'glmnet', 'jsonlite', 'leaflet', 'odbc', 
               'recipes', 'rmarkdown', 'rprojroot', 'RSQLite', 'rvest', 
@@ -36,6 +50,11 @@ packages <- c('caret', 'coefplot','DBI', 'dbplyr', 'doParallel', 'dygraphs',
               'xml2')
 install.packages(packages)
 ```
+
+<div class='sourceCode'><pre class='sourceCode r'><code class='sourceCode r'>
+packages <- `r sprintf("c('%s')", paste(packages, collapse="', \n\t'"))`
+install.packages(packages)
+</code></pre></div>
 
 # Project Structure
 
