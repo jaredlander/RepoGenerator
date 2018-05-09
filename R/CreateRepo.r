@@ -11,6 +11,7 @@
 #' @param user GitHub username
 #' @param organizer Name of organizer of class. This can be in the form a a Markdown-style link.
 #' @param token The name of the environment variable holding the GitHub access token. This can be set with [base::Sys.setenv()].
+#' @param ssh If `TRUE`, change the remote to use ssh instead of https
 #' @return If all operations are successful, returns `TRUE`
 #' 
 createRepo <- function(name, path=file.path('~', name), 
@@ -19,7 +20,8 @@ createRepo <- function(name, path=file.path('~', name),
                                   'tidyverse', 'usethis'),
                        user='jaredlander',
                        organizer="[Lander Analytics](www.landeranalytics.com)",
-                       token='GITHUB_PAT')
+                       token='GITHUB_PAT',
+                       ssh=TRUE)
 {
     # create new project
     rstudioapi::initializeProject(path=path)
@@ -62,13 +64,25 @@ createRepo <- function(name, path=file.path('~', name),
     # requires that the token be stored in GITHUB_PAT
     new_github_repo <- gh::gh("POST /user/repos", name=name, 
                               .token=Sys.getenv(token))
-    git2r::remote_add(repo, 'origin', sprintf('https://github.com/%s/%s.git', 
+    git2r::remote_add(repo, 'origin', sprintf('https://github.com/%s/%s.git',
                                               user, name)
     )
     
     # push to git
     git2r::push(repo, "origin", "refs/heads/master", 
                 credentials=git2r::cred_token(token))
+    
+    # switch to SSH afterward
+    # this will allow us to use the ssh key to push to it instead of https
+    if(ssh)
+    {
+        # first we remove the current https remote
+        git2r::remote_remove(repo, name='origin')
+        # then we add the ssh remote
+        git2r::remote_add(repo, 'origin', sprintf('git@github.com:%s/%s.git', 
+                                                  user, name)
+        )
+    }
     
     return(TRUE)
 }
