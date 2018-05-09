@@ -15,7 +15,8 @@
 #' 
 createRepo <- function(name, path=file.path('~', name), 
                        data, 
-                       packages=c('tidyverse'),
+                       packages=c('here', 'knitr', 'rmarkdown', 
+                                  'tidyverse', 'usethis'),
                        user='jaredlander',
                        organizer="[Lander Analytics](www.landeranalytics.com)",
                        token='GITHUB_PAT')
