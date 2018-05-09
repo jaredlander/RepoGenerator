@@ -4,10 +4,10 @@
 \alias{createRepo}
 \title{createRepo}
 \usage{
-createRepo(name, path = file.path("~", name), data,
-  packages = c("tidyverse"), user = "jaredlander",
+createRepo(name, path = file.path("~", name), data, packages = c("here",
+  "knitr", "rmarkdown", "tidyverse", "usethis"), user = "jaredlander",
   organizer = "[Lander Analytics](www.landeranalytics.com)",
-  token = "GITHUB_PAT")
+  token = "GITHUB_PAT", ssh = TRUE)
 }
 \arguments{
 \item{name}{Name to use for project and repo}
@@ -23,6 +23,8 @@ createRepo(name, path = file.path("~", name), data,
 \item{organizer}{Name of organizer of class. This can be in the form a a Markdown-style link.}
 
 \item{token}{The name of the environment variable holding the GitHub access token. This can be set with \code{\link[base:Sys.setenv]{base::Sys.setenv()}}.}
+
+\item{ssh}{If \code{TRUE}, change the remote to use ssh instead of https}
 }
 \value{
 If all operations are successful, returns \code{TRUE}
