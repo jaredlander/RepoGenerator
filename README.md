@@ -13,33 +13,17 @@ This is dependent on having a GitHub [Personal Access Token](https://blog.github
 
 First, go to GitHub user settings. Then click on `Developer Settings`.
 
-``` r
-knitr::include_graphics('images/GitHub-Settings.png')
-```
-
 ![](images/GitHub-Settings.png)
 
 On the following page click `Personal Access Token`.
-
-``` r
-knitr::include_graphics('images/GitHub-Developer-Settings.png')
-```
 
 ![](images/GitHub-Developer-Settings.png)
 
 Then click `Generate new token`.
 
-``` r
-knitr::include_graphics('images/GitHub-Token-Generation.png')
-```
-
 ![](images/GitHub-Token-Generation.png)
 
 Finally, select the `Repo` option.
-
-``` r
-knitr::include_graphics('images/PAT-Options.png')
-```
 
 ![](images/PAT-Options.png)
 

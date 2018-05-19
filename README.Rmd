@@ -29,25 +29,25 @@ This is dependent on having a GitHub [Personal Access Token](https://blog.github
 
 First, go to GitHub user settings. Then click on `Developer Settings`.
 
-```{r settings-image}
+```{r settings-image,echo=FALSE}
 knitr::include_graphics('images/GitHub-Settings.png')
 ```
 
 On the following page click `Personal Access Token`.
 
-```{r dev-settings-image}
+```{r dev-settings-image,echo=FALSE}
 knitr::include_graphics('images/GitHub-Developer-Settings.png')
 ```
 
 Then click `Generate new token`.
 
-```{r token-generation-image}
+```{r token-generation-image,echo=FALSE}
 knitr::include_graphics('images/GitHub-Token-Generation.png')
 ```
 
 Finally, select the `Repo` option.
 
-```{r repo-option-image}
+```{r repo-option-image,echo=FALSE}
 knitr::include_graphics('images/PAT-Options.png')
 ```
 
