@@ -14,8 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/jaredlander/RepoGenerator.svg?branch=master)](https://travis-ci.org/jaredlander/RepoGenerator)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/RepoGenerator)](https://cran.r-project.org/package=RepoGenerator)
+[![Travis-CI Build Status](https://travis-ci.org/jaredlander/RepoGenerator.svg?branch=master)](https://travis-ci.org/jaredlander/RepoGenerator)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jaredlander/RepoGenerator?branch=master&svg=true)](https://ci.appveyor.com/project/jaredlander/RepoGenerator)
 [![Coverage Status](https://img.shields.io/codecov/c/github/jaredlander/RepoGenerator/master.svg)](https://codecov.io/github/jaredlander/RepoGenerator?branch=master)
 
 # RepoGenerator

@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Travis-CI Build Status](https://travis-ci.org/jaredlander/RepoGenerator.svg?branch=master)](https://travis-ci.org/jaredlander/RepoGenerator) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/RepoGenerator)](https://cran.r-project.org/package=RepoGenerator) [![Coverage Status](https://img.shields.io/codecov/c/github/jaredlander/RepoGenerator/master.svg)](https://codecov.io/github/jaredlander/RepoGenerator?branch=master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/RepoGenerator)](https://cran.r-project.org/package=RepoGenerator) [![Travis-CI Build Status](https://travis-ci.org/jaredlander/RepoGenerator.svg?branch=master)](https://travis-ci.org/jaredlander/RepoGenerator) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/jaredlander/RepoGenerator?branch=master&svg=true)](https://ci.appveyor.com/project/jaredlander/RepoGenerator) [![Coverage Status](https://img.shields.io/codecov/c/github/jaredlander/RepoGenerator/master.svg)](https://codecov.io/github/jaredlander/RepoGenerator?branch=master)
 
 RepoGenerator
 =============
@@ -74,21 +74,21 @@ datafiles[, c('Local', 'Remote', 'Mode')]
 #> 12    manhattan_Train.rds
 #> 13 manhattan_Validate.rds
 #> 14    manhattan_Train.csv
-#>                                                       Remote    Mode
-#> 1  https://query.data.world/s/uVlTdijkCbfac49-3k12tawsmviArp       w
-#> 2  https://query.data.world/s/Z5k9W39e1kD5hzcJIcRlFClhIHnw5v      wb
-#> 3  https://query.data.world/s/5wa6K_X91yfkf-BVpRe2UIabO5A-QB      wb
-#> 4  https://query.data.world/s/033kPeDH9pMdcnhPRIOwhjrw3lpA10       w
-#> 5  https://query.data.world/s/IIwWxfh9cTydB8h_OueRyA7yxvZ6bf Flights
-#> 6  https://query.data.world/s/uDfiLMRxSiB_kQQhEt_LbDGVOcStBR       w
-#> 7  https://query.data.world/s/kK6-MCw-EbRmnwP-e2MmhEL82lLU4N       w
-#> 8  https://query.data.world/s/vzZ_zJzCqXY_yExaJIt79XkJAqUbe-     XML
-#> 9  https://query.data.world/s/o_LrhM_oY5dexXVDbsMNxF2JyyIMrg       w
-#> 10 https://query.data.world/s/GCIO0yVrO50N130s_CZNK50ujmqrE3       w
-#> 11 https://query.data.world/s/tkfdrcapfsw7ihodbjzsdywz7povce      wb
-#> 12 https://query.data.world/s/t6nblljn7a5ei6ghdqzkhfynn7iu5b      wb
-#> 13 https://query.data.world/s/4tfwbez3ul5ap7apg2ffgltfpzmifm      wb
-#> 14 https://query.data.world/s/zGvNwNJbY2470sjsVxYFstm426SEf1       w
+#>                                                       Remote Mode
+#> 1  https://query.data.world/s/uVlTdijkCbfac49-3k12tawsmviArp    w
+#> 2  https://query.data.world/s/Z5k9W39e1kD5hzcJIcRlFClhIHnw5v   wb
+#> 3  https://query.data.world/s/5wa6K_X91yfkf-BVpRe2UIabO5A-QB   wb
+#> 4  https://query.data.world/s/033kPeDH9pMdcnhPRIOwhjrw3lpA10    w
+#> 5  https://query.data.world/s/IIwWxfh9cTydB8h_OueRyA7yxvZ6bf    w
+#> 6  https://query.data.world/s/uDfiLMRxSiB_kQQhEt_LbDGVOcStBR    w
+#> 7  https://query.data.world/s/kK6-MCw-EbRmnwP-e2MmhEL82lLU4N    w
+#> 8  https://query.data.world/s/vzZ_zJzCqXY_yExaJIt79XkJAqUbe-    w
+#> 9  https://query.data.world/s/o_LrhM_oY5dexXVDbsMNxF2JyyIMrg    w
+#> 10 https://query.data.world/s/GCIO0yVrO50N130s_CZNK50ujmqrE3    w
+#> 11 https://query.data.world/s/tkfdrcapfsw7ihodbjzsdywz7povce   wb
+#> 12 https://query.data.world/s/t6nblljn7a5ei6ghdqzkhfynn7iu5b   wb
+#> 13 https://query.data.world/s/4tfwbez3ul5ap7apg2ffgltfpzmifm   wb
+#> 14 https://query.data.world/s/zGvNwNJbY2470sjsVxYFstm426SEf1    w
 ```
 
 ``` r

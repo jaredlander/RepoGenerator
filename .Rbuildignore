@@ -8,3 +8,4 @@
 ^codecov\.yml$
 images/*
 ^cran-comments\.md$
+^appveyor\.yml$
