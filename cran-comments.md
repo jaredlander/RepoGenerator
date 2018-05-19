@@ -1,7 +1,13 @@
 ## Test environments
-* Windows 10, R 3.4.3
-* ubuntu 14.04 (on travis-ci), R 3.4.3
-* win-builder (devel and release)
+- Windows 10, R 3.4.3
+- Windows Server 2012 R2 (on Appveyor)
+- win-builder (devel and release)
+- Ubuntu 14.04 (on travis-ci), R 3.4.3
+    - oldrel
+    - release
+    - devel
+- Ubuntu 16.04 (WSL), R 3.4.3
+
 
 ## R CMD check results
 

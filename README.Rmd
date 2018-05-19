@@ -30,25 +30,25 @@ This is dependent on having a GitHub [Personal Access Token](https://blog.github
 First, go to GitHub user settings. Then click on `Developer Settings`.
 
 ```{r settings-image}
-knitr::include_graphics(here::here('images', 'GitHub-Settings.png'))
+knitr::include_graphics('images/GitHub-Settings.png')
 ```
 
 On the following page click `Personal Access Token`.
 
 ```{r dev-settings-image}
-knitr::include_graphics(here::here('images', 'GitHub-Developer-Settings.png'))
+knitr::include_graphics('images/GitHub-Developer-Settings.png')
 ```
 
 Then click `Generate new token`.
 
 ```{r token-generation-image}
-knitr::include_graphics(here::here('images', 'GitHub-Token-Generation.png'))
+knitr::include_graphics('images/GitHub-Token-Generation.png')
 ```
 
 Finally, select the `Repo` option.
 
 ```{r repo-option-image}
-knitr::include_graphics(here::here('images', 'PAT-Options.png'))
+knitr::include_graphics('images/PAT-Options.png')
 ```
 
 The way some of the packages this package depends on are written, require that this code be saved in an environment variable. The best way to do this is to have a file named `.Renviron` in your home directory which can be located with `Sys.getenv('HOME')`. The file should look like this.
