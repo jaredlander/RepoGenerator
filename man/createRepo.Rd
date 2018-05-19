@@ -30,7 +30,7 @@ createRepo(name, path = file.path("~", name), data, packages = c("here",
 If all operations are successful, returns \code{TRUE}
 }
 \description{
-Creates a new project and pushes it to GitHuh
+Creates a new project and pushes it to GitHub
 }
 \details{
 This is designed to make a bare repo to be used for workshops. It will create a new project with a customized README and customized download file. It then pushes this to GitHub.

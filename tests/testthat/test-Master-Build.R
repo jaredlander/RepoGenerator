@@ -4,11 +4,15 @@ theUser <- 'jaredlander'
 repoName <- 'SuperTester'
 repoPath <- '~/SuperTester'
 theToken <- 'GITHUB_PAT'
-delToken <- Sys.getenv('GITHUB_Tester')
+delToken <- 'GITHUB_Tester'
 
 teardown({
     unlink(repoPath, recursive=TRUE, force=TRUE)
-    gh::gh("DELETE /repos/:owner/:repo", owner=theUser, repo=repoName, .token=delToken)
+    gone <- RepoGenerator:::deleteGitHubRepo(
+        owner=theUser,
+        repoName=repoName,
+        token=Sys.getenv(delToken)
+    )
 })
 
 test_that('Create objects here', {
@@ -18,8 +22,11 @@ test_that('Create objects here', {
     
     newRepo <- createRepo(name=repoName, path=repoPath, token=theToken)
     
-    allRepos <- gh::gh("/users/:username/repos", username=theUser, .token=Sys.getenv(theToken), .limit=Inf)
-    repoOnGitHub <- repoName %in% vapply(allRepos, "[[", "", "name")
+    repoExists <- RepoGenerator:::checkGitHubRepoExists(
+        owner=theUser,
+        repoName=repoName,
+        token=Sys.getenv(theToken)
+    )
 })
 
 test_that("The repo was created successfully on disc", {
@@ -37,5 +44,6 @@ test_that('The repo was created on GitHub', {
     skip('Need to figure out how to handle the env vars')
     skip_if(Sys.getenv(theToken) == '')
     
-    expect_true(repoOnGitHub)
+    expect_is(repoExists, 'response')
+    expect_equal(repoExists$status_code, 200)
 })
