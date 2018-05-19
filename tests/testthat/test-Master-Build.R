@@ -4,7 +4,7 @@ theUser <- 'jaredlander'
 repoName <- 'SuperTester'
 repoPath <- '~/SuperTester'
 theToken <- 'GITHUB_PAT'
-delToken <- 'GITHUB_Tester'
+delToken <- 'GITHUB_TESTER'
 
 teardown({
     unlink(repoPath, recursive=TRUE, force=TRUE)

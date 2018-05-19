@@ -3,10 +3,11 @@ context("Create a delete a GitHub repo")
 theUser <- 'jaredlander'
 repoName <- 'SuperTester'
 theToken <- 'GITHUB_PAT'
-delToken <- 'GITHUB_Tester'
+delToken <- 'GITHUB_TESTER'
 
-test_that("The repo repo creation succeeded", {
+test_that("The repo creation succeeded", {
     skip_on_cran()
+    # skip('Need to figure out how to handle the env vars')
     created <- RepoGenerator:::createGitHubRepo(repoName=repoName,
                                                 token=Sys.getenv(theToken))
     expect_is(created, 'response')
@@ -15,6 +16,7 @@ test_that("The repo repo creation succeeded", {
 
 test_that("The repo exists on Github", {
     skip_on_cran()
+    # skip('Need to figure out how to handle the env vars')
     repoExists <- RepoGenerator:::checkGitHubRepoExists(
         owner=theUser,
         repoName=repoName,
@@ -27,6 +29,7 @@ test_that("The repo exists on Github", {
 
 test_that("The repo is deleted", {
     skip_on_cran()
+    # skip('Need to figure out how to handle the env vars')
     deleted <- RepoGenerator:::deleteGitHubRepo(
         owner=theUser,
         repoName=repoName,
@@ -39,6 +42,7 @@ test_that("The repo is deleted", {
 
 test_that("The repo is gone from Github", {
     skip_on_cran()
+    # skip('Need to figure out how to handle the env vars')
     isGone <- RepoGenerator:::checkGitHubRepoExists(
         owner=theUser,
         repoName=repoName,
