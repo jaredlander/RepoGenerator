@@ -1,5 +1,5 @@
 #' @title createRepo
-#' @description Creates a new project and pushes it to GitHuh
+#' @description Creates a new project and pushes it to GitHub
 #' @details This is designed to make a bare repo to be used for workshops. It will create a new project with a customized README and customized download file. It then pushes this to GitHub.
 #' @export
 #' @author Jared P. Lander
@@ -52,18 +52,20 @@ createRepo <- function(name, path=file.path('~', name),
     
     dataBlocks <- createDownloadText(data)
     write(dataBlocks, file=file.path(path, 'prep', 'DownloadData.r'), append=TRUE)
-    
+
+    # create new GitHub repo
+    # requires that the token be stored in GITHUB_PAT
+    new_github_repo <- createGitHubRepo(repoName=name,
+                                        token=Sys.getenv(token))
+        
     # create git repo
     repo <- git2r::init(path)
     
     # add and commit files
     git2r::add(repo, dir(path, recursive=TRUE))
     git2r::commit(repo, "Adding all files to Git")
-    
-    # create new GitHub repo
-    # requires that the token be stored in GITHUB_PAT
-    new_github_repo <- gh::gh("POST /user/repos", name=name, 
-                              .token=Sys.getenv(token))
+
+    # add the remote
     git2r::remote_add(repo, 'origin', sprintf('https://github.com/%s/%s.git',
                                               user, name)
     )
