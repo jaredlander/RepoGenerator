@@ -17,7 +17,7 @@ teardown({
 
 test_that('Create objects here', {
     skip_on_cran()
-    skip('Need to figure out how to handle the env vars')
+    # skip('Need to figure out how to handle the env vars')
     skip_if(Sys.getenv(theToken) == '')
     
     newRepo <- createRepo(name=repoName, path=repoPath, token=theToken)
@@ -31,7 +31,7 @@ test_that('Create objects here', {
 
 test_that("The repo was created successfully on disc", {
     skip_on_cran()
-    skip('Need to figure out how to handle the env vars')
+    # skip('Need to figure out how to handle the env vars')
     skip_if(Sys.getenv(theToken) == '')
     
     expect_true(newRepo)
@@ -41,7 +41,7 @@ test_that("The repo was created successfully on disc", {
 
 test_that('The repo was created on GitHub', {
     skip_on_cran()
-    skip('Need to figure out how to handle the env vars')
+    # skip('Need to figure out how to handle the env vars')
     skip_if(Sys.getenv(theToken) == '')
     
     expect_is(repoExists, 'response')
