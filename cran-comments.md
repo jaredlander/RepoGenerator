@@ -11,7 +11,23 @@
 
 ## R CMD check results
 
+### On Windows 10, Windows Server, Ubuntu 14.04 and Ubuntu 16.04
+
 0 errors | 0 warnings | 0 note
+
+### On Win-builder
+
+The word 'repo' was flagged as possibly misspelled, though I do believe that is the correct spelling for that meaning.
+
+Got one warning about the README.
+
+```
+Conversion of 'README.md' failed:
+pandoc.exe: Could not fetch images/GitHub-Settings.png
+images/GitHub-Settings.png: openBinaryFile: does not exist (No such file or directory)
+```
+
+This was occurred because the `images` directory is marked in `.rbuildignore`. This image is only used for generating the README on GitHub so it should not affect anything on CRAN. Further, this warning did not occur in any other environment and the image shows up properly in the README on GitHub. So I hope it can be ignored since that image plays no role in package functionality.
 
 * This is a new release.
 
