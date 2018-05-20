@@ -13,3 +13,11 @@ env:
 
 after_success:
     - Rscript -e 'covr::codecov()'
+
+notifications:
+    email:
+        on_success: change
+        on_failure: change
+    slack:
+        rooms:
+            - secure: "gnXa3aiuTPJiBGnPf9X4a1c6A0OprTre/QW/lU6IJ3/k2uMBMuf7urBz+ZqMaJ8zW5bdHaGVgTwU5ufeNjAz52euMSHaw5k9tcKe4Ze399Oj+JUsvpTF0TQQf7M5fxakFzSh5UxWf7yjMH1kz3Rxs6EIwK/QKiH4PzJt+xUhniDai6nZQEc0YkJhLz6hMAsbkoVUiL+z3gCrP3IxW4PSD+2yIJQ9LEWumLDOf0xSkF1ZSWjfrlzKoi+abZFQ+A8YtpSDxbL/0lI+6oox80NmGUU8e1E8Ap42+kl1anlOuqhjLIAxkMaJeLCRVb91XwcqMZw2T6GVXoBZgzwNMsAQNBfOCApLBSrgrDDvJl81p0+MH3NlWErX13d5FcwbLbE4+sV17R8kRgWk5kOaH8CoMzp9X+vxJklbCwu4k7DF4wzTYQje65sN7xvnX9eN/zg0DkrzJM15WsLwgeNYjMK+vW4sht0q/etDpY6KBO9xgyTYhtVru8LCqlgUxUFDiE4jZaBARFQQCe5wzDWaeDrPb+5A4mKZkDbDD9VtnXlWDD6qeYFbu1tW5zRzXsgH2aoN0goEWxG0ajc27aCjaNKJxVUy4ompt5yveXPjM3vcy1bt6pP2tC3il7a+QGchABOlzRL0q7O4LTqEiqEtROeUNO49Ph8os5VouVzPMB6NA7I="
