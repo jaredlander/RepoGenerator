@@ -53,6 +53,12 @@ test_that('The repo was created on GitHub', {
     # skip_if(Sys.getenv(theToken) == '')
     checkSkip()
     
+    repoExists <- RepoGenerator:::checkGitHubRepoExists(
+        owner=theUser,
+        repoName=repoName,
+        token=Sys.getenv(theToken)
+    )
+    
     expect_is(repoExists, 'response')
     expect_equal(repoExists$status_code, 200)
 })

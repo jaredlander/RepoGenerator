@@ -30,7 +30,12 @@ createRepo <- function(name, path=file.path('~', name),
     
     # copy code, data, images, prep, etc
     # folders <- dir(here::here('payload'), full.names=TRUE)
-    folders <- dir(system.file('payload', package='RepoGenerator'), full.names=TRUE)
+    folders <- dir(system.file('payload', package='RepoGenerator'), 
+                   full.names=TRUE, 
+                   # include all files to get .gitignore
+                   # this seems a little dangerous to me
+                   # because what other hidden files are coming
+                   all.files=TRUE)
     file.copy(folders, file.path(path), recursive=TRUE)
     
     if(missing(readme))
@@ -70,6 +75,10 @@ createRepo <- function(name, path=file.path('~', name),
     
     # add and commit files
     git2r::add(repo, dir(path, recursive=TRUE))
+    # also add .gitignore
+    # not sure if we can just change the above dir to include hidden files
+    # because that might also include the .git folder
+    git2r::add(repo, file.path(path, '.gitignore'))
     git2r::commit(repo, "Adding all files to Git")
 
     # add the remote
