@@ -13,19 +13,19 @@ This is dependent on having a GitHub [Personal Access Token](https://blog.github
 
 First, go to GitHub user settings. Then click on `Developer Settings`.
 
-![](images/GitHub-Settings.png)
+![](tools/readme/GitHub-Settings.png)
 
 On the following page click `Personal Access Token`.
 
-![](images/GitHub-Developer-Settings.png)
+![](tools/readme/GitHub-Developer-Settings.png)
 
 Then click `Generate new token`.
 
-![](images/GitHub-Token-Generation.png)
+![](tools/readme/GitHub-Token-Generation.png)
 
 Finally, select the `Repo` option.
 
-![](images/PAT-Options.png)
+![](tools/readme/PAT-Options.png)
 
 The way some of the packages this package depends on are written, require that this code be saved in an environment variable. The best way to do this is to have a file named `.Renviron` in your home directory which can be located with `Sys.getenv('HOME')`. The file should look like this.
 
