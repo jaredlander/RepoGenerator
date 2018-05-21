@@ -1,7 +1,5 @@
 context("Master function creates a folder and repo")
 
-Sys.setenv('SKIP_TESTS'='yes')
-
 checkSkip <- function()
 {
     if(Sys.getenv('SKIP_TESTS') == 'yes')

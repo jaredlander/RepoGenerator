@@ -10,6 +10,7 @@ r:
 
 env:
     - NOT_CRAN=false
+    - SKIP_TESTS='yes'
 
 after_success:
     - Rscript -e 'covr::codecov()'
