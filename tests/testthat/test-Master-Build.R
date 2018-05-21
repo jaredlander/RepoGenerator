@@ -1,5 +1,13 @@
 context("Master function creates a folder and repo")
 
+Sys.setenv('SKIP_TESTS'='yes')
+
+checkSkip <- function()
+{
+    if(Sys.getenv('SKIP_TESTS') == 'yes')
+        skip('Skip tests')
+}
+
 theUser <- 'jaredlander'
 repoName <- 'SuperTester'
 repoPath <- '~/SuperTester'
@@ -18,7 +26,8 @@ teardown({
 test_that('Create objects here', {
     skip_on_cran()
     # skip('Need to figure out how to handle the env vars')
-    skip_if(Sys.getenv(theToken) == '')
+    # skip_if(Sys.getenv(theToken) == '')
+    checkSkip()
     
     newRepo <- createRepo(name=repoName, path=repoPath, token=theToken)
     
@@ -32,7 +41,8 @@ test_that('Create objects here', {
 test_that("The repo was created successfully on disc", {
     skip_on_cran()
     # skip('Need to figure out how to handle the env vars')
-    skip_if(Sys.getenv(theToken) == '')
+    # skip_if(Sys.getenv(theToken) == '')
+    checkSkip()
     
     expect_true(newRepo)
     expect_true(dir.exists(repoPath))
@@ -42,7 +52,8 @@ test_that("The repo was created successfully on disc", {
 test_that('The repo was created on GitHub', {
     skip_on_cran()
     # skip('Need to figure out how to handle the env vars')
-    skip_if(Sys.getenv(theToken) == '')
+    # skip_if(Sys.getenv(theToken) == '')
+    checkSkip()
     
     expect_is(repoExists, 'response')
     expect_equal(repoExists$status_code, 200)

@@ -11,6 +11,7 @@
 #' @param user GitHub username
 #' @param organizer Name of organizer of class. This can be in the form a a Markdown-style link.
 #' @param token The name of the environment variable holding the GitHub access token. This can be set with [base::Sys.setenv()].
+#' @param readme Path to parameterized rmarkdown document with parameters `className`, `organizer` and `packages`. If missing the deafult from the package is used.
 #' @param ssh If `TRUE`, change the remote to use ssh instead of https
 #' @return If all operations are successful, returns `TRUE`
 #' 
@@ -21,6 +22,7 @@ createRepo <- function(name, path=file.path('~', name),
                        user='jaredlander',
                        organizer="[Lander Analytics](www.landeranalytics.com)",
                        token='GITHUB_PAT',
+                       readme,
                        ssh=TRUE)
 {
     # create new project
@@ -31,8 +33,13 @@ createRepo <- function(name, path=file.path('~', name),
     folders <- dir(system.file('payload', package='RepoGenerator'), full.names=TRUE)
     file.copy(folders, file.path(path), recursive=TRUE)
     
+    if(missing(readme))
+    {
+        readme <- file.path(path, 'README.Rmd')
+    }
+    
     # render the README
-    rmarkdown::render(file.path(path, 'README.Rmd'), 
+    rmarkdown::render(readme, 
                       params=list(
                           className=name,
                           organizer=organizer,
