@@ -19,17 +19,9 @@
 
 ### On Win-builder
 
-The word 'repo' was flagged as possibly misspelled, though I do believe that is the correct spelling for that meaning.
+0 errors | 0 warnings | 1 notes
 
-Got one warning about the README.
-
-```
-Conversion of 'README.md' failed:
-pandoc.exe: Could not fetch images/GitHub-Settings.png
-images/GitHub-Settings.png: openBinaryFile: does not exist (No such file or directory)
-```
-
-This occurred because the `images` directory is marked in `.rbuildignore`. This image is only used for generating the README on GitHub so it should not affect anything on CRAN. Further, this warning did not occur in any other environment and the image shows up properly in the README on GitHub. So I hope it can be ignored since that image plays no role in package functionality.
+The note is two-fold. The first part is saying that I'm the maintainer. But I guess the real trigger is the possibly misspelled word "repo." As far as I can tell that seems to be an appropriate use of the word.
 
 * This is a new release.
 
