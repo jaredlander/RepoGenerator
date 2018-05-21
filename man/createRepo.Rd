@@ -24,7 +24,7 @@ createRepo(name, path = file.path("~", name), data, packages = c("here",
 
 \item{token}{The name of the environment variable holding the GitHub access token. This can be set with \code{\link[base:Sys.setenv]{base::Sys.setenv()}}.}
 
-\item{readme}{Path to parameterized rmarkdown document with parameters \code{className}, \code{organizer} and \code{packages}. If missing the deafult from the package is used.}
+\item{readme}{Path to parameterized rmarkdown document with parameters \code{className}, \code{organizer} and \code{packages}. If missing the default from the package is used.}
 
 \item{ssh}{If \code{TRUE}, change the remote to use ssh instead of https}
 }

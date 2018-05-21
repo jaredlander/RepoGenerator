@@ -51,7 +51,7 @@ callGitHubAPI <- function(repoName,
 }
 
 #' @title createGitHubRepo
-#' @describeIn callGitHubAPI Creating a GitHubRepo
+#' @describeIn callGitHubAPI Creating a GitHub Repo
 createGitHubRepo <- function(repoName, 
                              token)
 {
@@ -63,7 +63,7 @@ createGitHubRepo <- function(repoName,
 }
 
 #' @title deleteGitHubRepo
-#' @describeIn callGitHubAPI Deleting a GitHubRepo
+#' @describeIn callGitHubAPI Deleting a GitHub Repo
 #' @param owner GitHub username
 deleteGitHubRepo <- function(owner,
                              repoName,
@@ -77,7 +77,7 @@ deleteGitHubRepo <- function(owner,
 }
 
 #' @title checkGitHubRepoExists
-#' @describeIn callGitHubAPI Check that a GitHubRepo exists
+#' @describeIn callGitHubAPI Check that a GitHub Repo exists
 checkGitHubRepoExists <- function(owner,
                                   repoName,
                                   token)

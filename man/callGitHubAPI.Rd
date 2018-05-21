@@ -42,11 +42,11 @@ Builds up and executes a GitHub API request
 }
 \section{Functions}{
 \itemize{
-\item \code{createGitHubRepo}: Creating a GitHubRepo
+\item \code{createGitHubRepo}: Creating a GitHub Repo
 
-\item \code{deleteGitHubRepo}: Deleting a GitHubRepo
+\item \code{deleteGitHubRepo}: Deleting a GitHub Repo
 
-\item \code{checkGitHubRepoExists}: Check that a GitHubRepo exists
+\item \code{checkGitHubRepoExists}: Check that a GitHub Repo exists
 }}
 
 \author{

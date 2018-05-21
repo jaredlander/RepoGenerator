@@ -29,7 +29,7 @@ pandoc.exe: Could not fetch images/GitHub-Settings.png
 images/GitHub-Settings.png: openBinaryFile: does not exist (No such file or directory)
 ```
 
-This was occurred because the `images` directory is marked in `.rbuildignore`. This image is only used for generating the README on GitHub so it should not affect anything on CRAN. Further, this warning did not occur in any other environment and the image shows up properly in the README on GitHub. So I hope it can be ignored since that image plays no role in package functionality.
+This occurred because the `images` directory is marked in `.rbuildignore`. This image is only used for generating the README on GitHub so it should not affect anything on CRAN. Further, this warning did not occur in any other environment and the image shows up properly in the README on GitHub. So I hope it can be ignored since that image plays no role in package functionality.
 
 * This is a new release.
 
