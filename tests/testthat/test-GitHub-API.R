@@ -1,4 +1,4 @@
-context("Create a delete a GitHub repo")
+context("Create and delete a GitHub repo")
 
 theUser <- 'jaredlander'
 repoName <- 'SuperTester'

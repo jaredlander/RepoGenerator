@@ -1,8 +1,10 @@
 ## Test environments
-- Windows 10, R 3.4.3
+- Windows 10
+    - R 3.5.0
+    - R 3.4.3
 - Windows Server 2012 R2 (on Appveyor)
 - win-builder (devel and release)
-- Ubuntu 14.04 (on travis-ci), R 3.4.3
+- Ubuntu 14.04 (on travis-ci)
     - oldrel
     - release
     - devel
@@ -13,7 +15,7 @@
 
 ### On Windows 10, Windows Server, Ubuntu 14.04 and Ubuntu 16.04
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 0 notes
 
 ### On Win-builder
 

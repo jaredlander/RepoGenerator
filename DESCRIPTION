@@ -1,7 +1,7 @@
 Package: RepoGenerator
 Title: Generates a Project and Repo for Easy Initialization of a Workshop
 Version: 0.0.1
-Authors@R: person("Jared", "Lander", email = "packages@jaredlander.com", role = c("aut", "cre"))
+Authors@R: person(c("Jared", "P."), "Lander", email = "packages@jaredlander.com", role = c("aut", "cre"))
 Description: Generates a project and repo for easy initialization of a workshop.
 Depends: R (>= 3.3.0)
 License: MIT + file LICENSE
