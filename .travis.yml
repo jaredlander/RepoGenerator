@@ -9,8 +9,9 @@ r:
     - devel
 
 env:
-    - NOT_CRAN=false
-    - SKIP_TESTS='yes'
+    global:
+        - NOT_CRAN=false
+        - SKIP_TESTS='yes'
 
 after_success:
     - Rscript -e 'covr::codecov()'
