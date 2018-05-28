@@ -8,7 +8,7 @@ checkSkip <- function()
 
 theUser <- 'jaredlander'
 repoName <- 'SuperTester'
-repoPath <- '~/SuperTester'
+repoPath <- tempdir()
 theToken <- 'GITHUB_PAT'
 delToken <- 'GITHUB_TESTER'
 
