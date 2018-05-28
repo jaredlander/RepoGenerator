@@ -114,9 +114,9 @@ createRepo <- function(name, path=file.path('~', name),
 #' @return Returns the block of text
 #' @examples 
 #' 
-#' #dataList <- read.csv(system.file('metadata/DataList.csv', package='RepoGenerator'), 
-#' #    stringsAsFactors=FALSE, header=TRUE)
-#' #createDownloadText(dataList)
+#' dataList <- read.csv(system.file('metadata/DataList.csv', package='RepoGenerator'), 
+#'     stringsAsFactors=FALSE, header=TRUE)
+#' RepoGenerator:::createDownloadText(dataList)
 #' 
 createDownloadText <- function(info)
 {
