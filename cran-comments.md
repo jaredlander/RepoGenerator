@@ -1,3 +1,7 @@
+## Requests from CRAN
+
+Elaborated the description, changed the test to use tempdir, updted the createDownloadText() example. The only thing I couldn't do was add an example for createRepo() since that requires a GitHub Personal Access Token to run. I could set donttest or dontrun, but if I recall correctly they still get tested by CRAN.
+
 ## Test environments
 - Windows 10
     - R 3.5.0
