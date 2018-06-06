@@ -2,6 +2,8 @@
 
 Elaborated the description, changed the test to use tempdir, updted the createDownloadText() example. The only thing I couldn't do was add an example for createRepo() since that requires a GitHub Personal Access Token to run. I could set donttest or dontrun, but if I recall correctly they still get tested by CRAN.
 
+Added a `SystemRequirements` field to the DESCRIPTION file to include GitHub and RStudio.
+
 ## Test environments
 - Windows 10
     - R 3.5.0
