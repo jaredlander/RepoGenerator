@@ -16,4 +16,4 @@ Suggests: testthat,
     covr
 URL: https://github.com/jaredlander/RepoGenerator
 BugReports: https://github.com/jaredlander/RepoGenerator/issues
-SystemRequirements: GitHub, RStudio
+SystemRequirements: GitHub, 'RStudio'
