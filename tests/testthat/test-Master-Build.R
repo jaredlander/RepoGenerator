@@ -1,5 +1,5 @@
 context("Master function creates a folder and repo")
-
+Sys.setenv("R_TESTS" = "")
 checkSkip <- function()
 {
     if(Sys.getenv('SKIP_TESTS') == 'yes')
@@ -12,13 +12,6 @@ repoPath <- tempdir()
 theToken <- 'GITHUB_PAT'
 delToken <- 'GITHUB_TESTER'
 
-setup({
-    newRepo <- createRepo(name=repoName, path=repoPath, 
-                          user=theUser, 
-                          organizer='Lander Analytics',
-                          token=theToken)
-})
-
 teardown({
     unlink(repoPath, recursive=TRUE, force=TRUE)
     gone <- RepoGenerator:::deleteGitHubRepo(
@@ -26,6 +19,15 @@ teardown({
         repoName=repoName,
         token=Sys.getenv(delToken)
     )
+})
+
+test_that('Create objects here', {
+    skip_on_cran()
+    skip_if(Sys.getenv(theToken) == '')
+    checkSkip()
+    
+    newRepo <- createRepo(name=repoName, path=repoPath, 
+                          user=theUser, token=theToken)
 })
 
 test_that("The repo was created successfully on disc", {
