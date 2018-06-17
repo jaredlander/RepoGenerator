@@ -22,7 +22,7 @@ Creates a block of code. The first line is a comment of the file name, then is u
 
 dataList <- read.csv(system.file('metadata/DataList.csv', package='RepoGenerator'), 
     stringsAsFactors=FALSE, header=TRUE)
-RepoGenerator:::createDownloadText(dataList)
+cat(RepoGenerator:::createDownloadText(dataList))
 
 }
 \author{

@@ -52,7 +52,7 @@ install.packages(packages)
 ```
 
 <div class='sourceCode'><pre class='sourceCode r'><code class='sourceCode r'>
-packages <- `r sprintf("c('%s')", paste(packages, collapse="', \n\t'"))`
+packages <- `r sprintf("c(\n\t'%s'\n)", paste(packages, collapse="', \n\t'"))`
 install.packages(packages)
 </code></pre></div>
 
@@ -70,7 +70,7 @@ After that runs successfully you will have a new folder holding the R project th
 knitr::include_graphics('images/ProjectFolder.png')
 ```
 
-If a new project did not open automatically, either double-click the file called `r sprintf('%s.Rproj', className)` or run the following line of code.
+If a new project __did not open__ automatically, either double-click the file called `r sprintf('%s.Rproj', className)` or run the following line of code.
 
 ```{r open-project,eval=FALSE}
 rstudioapi::openProject(newProject)
@@ -85,6 +85,8 @@ knitr::include_graphics('images/ProjectCorner.png')
 ## Clone this Repo
 
 Alternatively, if you use git then please clone this repo then open it as an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
+
+Skip this step if you followed the instructions above.
 
 ```sh
 # if using SSH

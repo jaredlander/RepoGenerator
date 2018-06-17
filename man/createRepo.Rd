@@ -4,10 +4,9 @@
 \alias{createRepo}
 \title{createRepo}
 \usage{
-createRepo(name, path = file.path("~", name), data, packages = c("here",
-  "knitr", "rmarkdown", "tidyverse", "usethis"), user = "jaredlander",
-  organizer = "[Lander Analytics](www.landeranalytics.com)",
-  token = "GITHUB_PAT", readme, ssh = TRUE)
+createRepo(name, path, data, packages = c("here", "knitr", "rmarkdown",
+  "tidyverse", "usethis"), user, organizer = user, token = "GITHUB_PAT",
+  readme, ssh = TRUE)
 }
 \arguments{
 \item{name}{Name to use for project and repo}

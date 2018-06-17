@@ -15,16 +15,33 @@
 #' @param ssh If `TRUE`, change the remote to use ssh instead of https
 #' @return If all operations are successful, returns `TRUE`
 #' 
-createRepo <- function(name, path=file.path('~', name), 
+createRepo <- function(name, path, 
                        data, 
                        packages=c('here', 'knitr', 'rmarkdown', 
                                   'tidyverse', 'usethis'),
-                       user='jaredlander',
-                       organizer="[Lander Analytics](www.landeranalytics.com)",
+                       user,
+                       organizer=user,
                        token='GITHUB_PAT',
                        readme,
                        ssh=TRUE)
 {
+    # use defaults for certain arguments
+    if(missing(user))
+    {
+        user <- Sys.info()['user']
+    }
+    
+    # they must specify a path
+    if(missing(path))
+    {
+        stop('You must specify a path to for the generated repo.')
+    }
+    
+    # they MUST install usethis and rprojroot, so if they are not in the 
+    # packages list they are added
+    # and a message is generated saying as such
+    unique(c(packages, 'rprojroot', 'usethis'))
+    
     # create new project
     rstudioapi::initializeProject(path=path)
     
@@ -116,7 +133,7 @@ createRepo <- function(name, path=file.path('~', name),
 #' 
 #' dataList <- read.csv(system.file('metadata/DataList.csv', package='RepoGenerator'), 
 #'     stringsAsFactors=FALSE, header=TRUE)
-#' RepoGenerator:::createDownloadText(dataList)
+#' cat(RepoGenerator:::createDownloadText(dataList))
 #' 
 createDownloadText <- function(info)
 {
