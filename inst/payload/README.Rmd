@@ -38,6 +38,8 @@ packages <- sort(params$packages)
 
 This is an empty repo to initialize an R project for training courses organized by `r organizer`.
 
+Please follow all instructions to set up your environment for the training.
+
 # Packages
 
 To get started run the following code to install the latest version of the necessary packages.
@@ -66,39 +68,19 @@ newProject <- usethis::use_course('https://github.com/jaredlander/`r className`/
 
 After that runs successfully you will have a new folder holding the R project that looks like this (the name in the image may be different).
 
-```{r proj-folder,echo=FALSE}
+```{r proj-folder,echo=FALSE,out.width='50%'}
 knitr::include_graphics('images/ProjectFolder.png')
 ```
 
-If a new project __did not open__ automatically, either double-click the file called `r sprintf('%s.Rproj', className)` or run the following line of code.
-
-```{r open-project,eval=FALSE}
-rstudioapi::openProject(newProject)
-```
-
-After running this code, or double-clicking that file, you will be in an RStudio Project called `r className` (the name in the image may be different). You can see this in the top right of RStudio.
+After running this code you will be in an RStudio Project called `r className`. You can see this in the top right of RStudio (the name in the image may be different).
 
 ```{r proj-corner,echo=FALSE}
 knitr::include_graphics('images/ProjectCorner.png')
 ```
 
-## Clone this Repo
-
-Alternatively, if you use git then please clone this repo then open it as an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
-
-Skip this step if you followed the instructions above.
-
-```sh
-# if using SSH
-git clone git@github.com:jaredlander/`r className`.git
-
-# if using https
-git clone https://github.com/jaredlander/`r className`.git
-```
-
 # Data
 
-Data for the class is kept at [data.world](https://data.world/landeranalytics/training). You can sign up for a free account or run the following code. This requires that you are using an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) setup exactly like this repo, which is done if you followed the preceding code.
+Data for the class is kept at [data.world](https://data.world/landeranalytics/training). Run the following code to download all the data. This requires that you are using an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) setup exactly like this repo, which is done if you followed the preceding code.
 
 ```{r source-data-file,eval=FALSE}
 source('prep/DownloadData.r')
