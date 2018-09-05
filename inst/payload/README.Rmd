@@ -44,15 +44,6 @@ Please follow all instructions to set up your environment for the training.
 
 To get started run the following code to install the latest version of the necessary packages.
 
-```{r install.packages,eval=FALSE,echo=FALSE}
-packages <- c('caret', 'coefplot','DBI', 'dbplyr', 'doParallel', 'dygraphs', 
-              'foreach', 'ggthemes', 'glmnet', 'jsonlite', 'leaflet', 'odbc', 
-              'recipes', 'rmarkdown', 'rprojroot', 'RSQLite', 'rvest', 
-              'tidyverse', 'threejs', 'usethis', 'UsingR', 'xgboost', 'XML', 
-              'xml2')
-install.packages(packages)
-```
-
 <div class='sourceCode'><pre class='sourceCode r'><code class='sourceCode r'>
 packages <- `r sprintf("c(\n\t'%s'\n)", paste(packages, collapse="', \n\t'"))`
 install.packages(packages)
@@ -66,11 +57,11 @@ Making use of RStudio projects greatly improves the user experience. To facilita
 newProject <- usethis::use_course('https://github.com/jaredlander/`r className`/archive/master.zip')
 ```
 
-After that runs successfully you will have a new folder holding the R project that looks like this (the name in the image may be different).
+<!-- After that runs successfully you will have a new folder holding the R project that looks like this (the name in the image may be different). -->
 
-```{r proj-folder,echo=FALSE,out.width='50%'}
-knitr::include_graphics('images/ProjectFolder.png')
-```
+<!-- ```{r proj-folder,echo=FALSE,out.width='50%'} -->
+<!-- knitr::include_graphics('images/ProjectFolder.png') -->
+<!-- ``` -->
 
 After running this code you will be in an RStudio Project called `r className`. You can see this in the top right of RStudio (the name in the image may be different).
 
